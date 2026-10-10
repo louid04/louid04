@@ -1,117 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Louidjy Descardes — Designer & Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#EEF2F7;--ink:#101828;--mute:#475467;--blue:#0B4FD8;--red:#D92D43;--card:#FFFFFF;--line:#CBD5E1;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1626;--ink:#E8EDF5;--mute:#9AA7BC;--blue:#6C9BFF;--red:#FF6B7D;--card:#16213A;--line:#2A3857}}
-:root[data-theme="dark"]{--bg:#0E1626;--ink:#E8EDF5;--mute:#9AA7BC;--blue:#6C9BFF;--red:#FF6B7D;--card:#16213A;--line:#2A3857}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Instrument Sans",system-ui,sans-serif}
-h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.05;margin:0}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-nav b{font:800 21px "Bricolage Grotesque",sans-serif}
-nav div{display:flex;gap:22px;font-weight:500}
-nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--ink)}
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:48px 0 72px}
-.hero h1{font-size:clamp(42px,7vw,84px);font-weight:800;letter-spacing:-.03em}
-.hero p{max-width:48ch;color:var(--mute);font-size:19px;margin:22px 0 28px}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
-.btn.p{background:var(--ink);color:var(--bg)}
-.split{border:2px solid var(--ink);border-radius:20px;overflow:hidden;background:var(--card);min-height:320px;display:grid;grid-template-rows:1fr 1fr}
-.split .d{display:flex;align-items:center;justify-content:center;gap:12px;background:var(--blue)}
-.split .d i{display:block;width:64px;height:64px;background:var(--red);border-radius:50%}
-.split .d i:nth-child(2){background:var(--bg);border-radius:12px}
-.split .d i:nth-child(3){background:var(--ink);border-radius:50% 0 50% 0}
-.split pre{margin:0;padding:18px 20px;font:500 14px/1.7 ui-monospace,Menlo,Consolas,monospace;overflow-x:auto}
-.split pre em{font-style:normal;color:var(--red)}
-section{padding:64px 0;border-top:2px solid var(--ink)}
-section h2{font-size:clamp(30px,5vw,48px);font-weight:700;letter-spacing:-.02em;margin-bottom:12px}
-.lead{color:var(--mute);max-width:56ch;margin:0 0 34px}
-.work{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
-.proj{background:var(--card);border:2px solid var(--ink);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
-.thumb{height:190px;display:flex;align-items:center;justify-content:center;color:#fff;font:700 22px "Bricolage Grotesque",sans-serif;text-align:center;padding:16px}
-.proj .b{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
-.proj h3{font-size:24px;font-weight:700}
-.proj p{margin:0;color:var(--mute);font-size:16px}
-.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:10px}
-.tags span{border:1.5px solid var(--line);border-radius:999px;padding:3px 12px;font-size:14px;color:var(--mute)}
-.proj a{font-weight:600;padding-top:6px}
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px}
-.skills h3{font-size:28px;margin-bottom:14px}
-.skills ul{list-style:none;padding:0;margin:0}
-.skills li{padding:11px 0;border-bottom:1.5px solid var(--line)}
-.skills .c{color:var(--blue)}.skills .r{color:var(--red)}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.about p{margin:0 0 16px;max-width:52ch}
-.contact a.big{font:800 clamp(24px,5vw,56px) "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;text-decoration:none;word-break:break-all}
-.contact a.big:hover{color:var(--red)}
-.links{display:flex;gap:24px;flex-wrap:wrap;margin-top:22px;font-weight:600}
-footer{padding:28px 0 40px;color:var(--mute);font-size:15px;border-top:2px solid var(--ink)}
-@media(max-width:760px){.hero,.about{grid-template-columns:1fr}.hero{padding-top:24px}nav div{gap:14px;font-size:15px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05090d">
+  <meta name="description" content="Louidjy Descardes — Web Development, Networking, and Data Science.">
+  <title>Louidjy Descardes | Developer Portfolio</title>
+  <style>
+    :root{color-scheme:dark;--bg:#05090d;--panel:#0a131b;--panel2:#0c1821;--line:#19303b;--text:#edf7fb;--muted:#a8bbc5;--green:#20ef83;--cyan:#36d9e8}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 78% 0%,#073323 0,transparent 32%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--green);text-decoration:none}
+    a:hover{color:#a0ffcb}
+    .wrap{width:min(1120px,92%);margin:auto}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--line)}
+    .brand{font-weight:800;letter-spacing:.03em;color:var(--green);font-size:1.2rem}
+    .navlinks{display:flex;gap:20px;align-items:center;flex-wrap:wrap;font-size:.92rem}
+    .navlinks a{color:var(--muted)}
+    .navlinks a:hover{color:var(--green)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--green);border-radius:999px;padding:10px 17px;font-weight:700;color:#031109;background:var(--green);transition:transform .2s,box-shadow .2s}
+    .btn:hover{color:#031109;transform:translateY(-2px);box-shadow:0 0 24px #20ef8340}
+    .btn.secondary{color:var(--text);background:transparent;border-color:var(--line)}
+    .hero{display:grid;grid-template-columns:1.35fr .65fr;gap:34px;align-items:center;padding:76px 0 62px}
+    .profile-photo{width:190px;height:190px;object-fit:cover;object-position:center 35%;border-radius:50%;border:3px solid var(--green);box-shadow:0 0 32px #20ef8340;margin-bottom:22px}
+    @media(max-width:760px){.profile-photo{width:150px;height:150px}}
+    .eyebrow{color:var(--green);font-size:.82rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+    h1{font-size:clamp(2.6rem,6vw,4.7rem);line-height:1.03;letter-spacing:-.05em;margin:14px 0}
+    h1 span{color:var(--green)}
+    .roles{font-size:1.05rem;color:var(--muted);margin:0 0 18px}
+    .intro{max-width:650px;color:#c4d4dc;font-size:1.1rem}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .hero-card{border:1px solid #1c4b3a;border-radius:24px;padding:28px;background:linear-gradient(145deg,#0c211b,#071017 70%);box-shadow:0 18px 70px #0007;position:relative;overflow:hidden}
+    .hero-card:after{content:"</>";position:absolute;right:16px;bottom:-32px;font-size:7rem;font-weight:900;color:#20ef8310}
+    .terminal-top{display:flex;gap:7px;margin-bottom:25px}
+    .dot{width:9px;height:9px;border-radius:50%;background:#355247}
+    .terminal-label{font-size:.75rem;color:var(--muted);margin-left:auto}
+    .code{font: .9rem/1.9 ui-monospace,SFMono-Regular,Consolas,monospace;color:#c3d8d4}
+    .code .g{color:var(--green)}.code .c{color:var(--cyan)}
+    section{padding:26px 0 36px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:20px}
+    h2{font-size:1.7rem;margin:0;letter-spacing:-.025em}
+    .sub{margin:4px 0 0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .card{background:linear-gradient(150deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:17px;padding:22px}
+    .icon{font-size:1.5rem}
+    h3{margin:9px 0 8px;font-size:1.08rem}
+    .card p{color:var(--muted);margin:0;font-size:.94rem}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+    .tag{border:1px solid #24433e;color:#b9f8d5;border-radius:8px;padding:4px 9px;font-size:.78rem}
+    .projects .card{display:flex;flex-direction:column;min-height:200px}
+    .project-link{margin-top:auto;padding-top:20px;font-weight:700;font-size:.9rem}
+    .note{font-size:.84rem;color:var(--muted);margin-top:14px}
+    .contact{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:linear-gradient(100deg,#0b241b,#09131b);border:1px solid #1b4a38;border-radius:20px;padding:26px}
+    .contact p{color:var(--muted);margin:4px 0 0}
+    footer{border-top:1px solid var(--line);margin-top:42px;padding:24px 0 36px;color:var(--muted);font-size:.88rem}
+    .footrow{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;padding:52px 0 35px}.hero-card{max-width:560px}.grid{grid-template-columns:1fr}.nav{align-items:flex-start;gap:16px;flex-direction:column}.navlinks{gap:13px}.section-head{align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
 </head>
 <body>
-<div class="wrap">
-<nav><b>Louidjy Descardes</b><div><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+  <header class="wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home">Louidjy<span style="color:var(--text)">.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+        <a class="btn" href="https://github.com/louid04" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </nav>
+  </header>
 
-<header class="hero">
-<div>
-<h1>Designer and developer.</h1>
-<p>I design brand identities and build websites for small businesses, from the first logo to a live, mobile-ready site. Based in Les Cayes, Haiti.</p>
-<div class="btns"><a class="btn p" href="#work">View my work</a><a class="btn" href="#contact">Get in touch</a></div>
-</div>
-<div class="split" aria-hidden="true">
-<div class="d"><i></i><i></i><i></i></div>
-<pre>const <em>louidjy</em> = {
-  design: ["logos", "branding"],
-  develop: ["HTML", "CSS", "JavaScript"],
-  location: "Les Cayes, Haiti"
-};</pre>
-</div>
-</header>
+  <main class="wrap">
+    <section class="hero" id="home">
+      <div>
+        <img class="profile-photo" src="assets/profile.jpg" alt="Portrait of Louidjy Descardes">
+        <div class="eyebrow">Code · Connect · Analyze · Build</div>
+        <h1>Hi, I'm<br><span>Louidjy Descardes.</span></h1>
+        <p class="roles">Web Development · Networking · Data Science</p>
+        <p class="intro">I'm a technology enthusiast from Haiti who enjoys learning how the web works, how networks connect people, and how data can help us understand the world. I'm building my skills one practical project at a time.</p>
+        <div class="actions">
+          <a class="btn" href="#projects">Explore projects ↓</a>
+          <a class="btn secondary" href="https://github.com/louid04" target="_blank" rel="noreferrer">Visit my GitHub ↗</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Code-themed decoration">
+        <div class="terminal-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="terminal-label">learning-lab</span></div>
+        <div class="code"><span class="c">const</span> developer = {<br>
+        &nbsp;&nbsp;name: <span class="g">"Louidjy"</span>,<br>
+        &nbsp;&nbsp;interests: [<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="g">"Web Development"</span>,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="g">"Networking"</span>,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="g">"Data Science"</span><br>
+        &nbsp;&nbsp;],<br>
+        &nbsp;&nbsp;mindset: <span class="g">"Always learning"</span><br>
+        };<br><br><span class="c">console</span>.log(<span class="g">"Let's build."</span>);<span class="g"> ▌</span></div>
+      </aside>
+    </section>
 
-<section id="work">
-<h2>Selected work</h2>
-<p class="lead">Projects for my own business, IQ Services, a printing and personalization company.</p>
-<div class="work">
-<article class="proj"><div class="thumb" style="background:#000"><img src="data:image/webp;base64,UklGRuwSAABXRUJQVlA4IOASAABQZgCdASpoAWgBPlEmkUYjoiGhInLZaHAKCWlu4XShG/Nd8Yf3H+p9wP9U/Kf+k9pf499kuav0x5n/xH60fnP7J+5H9091u9f47f23qBfiH8s/wv9p/Zj+0fuLxpmr/6L/heoF7bfT/8x/YP3c/vHpp/y3ol9hv8x7gH6y/6T83+YU/Bf8/2Av5d/af81/hvyy+mP+P/9X94/0/7se1D81/wP/T/xf+V+Qr+Tf1D/ef4n97/89///p69gn7f+yP+x//uFnyW9BLZpQW9BLZpQW9BLZpQW9BLZpQW9BLZpQW9BLZpQW9BLZpQW9BLZpQW9BLZpQW0t7PCb0EtmlBbxYSSFhDKrjLBz9RT30Rj07P+DGKi/xpW8dadWQpb9WMKkDyG45eHWj5chmQjT6KYb62s5VuS0tzvx04QbmyEk6Bh+lv1h8l4yaljHL/zoOswPvJD+WYcYDfZDRsmFD1fbzLozlEuaNQfds1pQprUosxGil2lul7KX+WaT+06N7rF7LRmQCC234Hg6t06Xc7T2DTwSie1KsJMxD+4vOMP89oAQlM4+MDwkUwd8GHZd5NGt0POyZe2CAa/jt5RjLIG6rSNxKyCAzqERL1b/QhuZch1QFsr/NMR8xZs6vwVJ+5DvZJZP/3sAmJjJ07i2286v61Qw68kFxWJ6FXGiL6clX6mWTpWzQAMlEgXMK3CzIc/amks+GdZSRD44b6AmWpTeYOWcfxttiD5MaHv07UQDXVLfjlChSZwbM2I+e+AOSoQYay+VSvmculwOOqjUSKD5N0XBzHzu9mO5bA2/Fucg960C/+/hy4y/uPzPZU4TQOyduD+INA1QQiUbktHDJ+YkTrXUIWqjw1Eeg4UX87Iv7tNLriBw9lbz4H6yOXOmikZqEkdS+yw0VEFyvKo14S7zfqAced/JKfQVUm2llO1gYDDn6+eyt6CWqkyUptU0+aLg2Dpfw82KNLRa2hc2gaD+AkeXx8SR1nS4a0regls0pW1lNpemVs0oLegls0oLegls0oLegls0oLegls0oLegls0oLegls0oLegls0oLegls0oLegls0oLegls0oLegls0oLegls0oLeglMAAD+/8DaAAAE7T45zxEK91zP/la78PEm8BJ80o4DcQgMft/BttI84OJ+31uEG3JnxirrOJKtkQopcjwwRRKWwISGDzoQoBLnOFKk+/1k+CKtFYeoKC/b/jlLhmb/9wf5aXKIHJm9P6ufkfxJQ1WQCU/3fIuebt5Dno8gf1TuoHEVL0k45UV4U3VWndj6ZuxoGpBXqvR+vT+EKEM04PXW2/Xk1QxaxMa9YISufI/nxYteUp/kgk/mX/rI2dXoBeBqz700xvvyk51bJvEl4f+w9uBPj+Alh7SDypQiJScpztHWXEJFX47jYkAJfTR2zcPKAeInVd46AIRzONYpIMdg/npP+tne3wPq5p8KDccCt7n5+WcKJSNzzjQMZsDLmqLqXyYxVx8uP3c7FJBf2cOIZOvRN/3kJtE3U+0H/0SIvOWEtK4tjhwf0XdqLSyYTnndt8Ic+0D/ZcQ/ZNsPS4a7Eo9Q9L+5aGnHP/BKjT1W65rsVTfdXj7H8b7IYSf5qMZKePxxWnpptCveirW4No3EtYkHNJdCbMFlUWeTDIqHgjtZpJ+AlP3ACfchrMyk9UfuYaL9Bmdcdlji+edHKC9sqPnuupRD70sne5jKGg7mE36BwCHCD+0jTn9OZlbZNmT5p5CK6VyHi7OPJW/FQB4eAJD88oe3rtPcun83uuGHe138rP7/F+BgBOkFTQpEReHv0D4BW0yuHPjN089XWI7D8xOANnL3oax/iNyYV7VOw6QYb4xXbO6WQjERrJTF48bNvQuB8uD7g0KxuH7RSUivI48x7a6T9c6cwsY1fG+cQtQ73ZHZ8FCbAxCpEi8g7TwRP1SzWQ0BGv4+SCr8hmTrOk/2B0nrBhq+q0h61x/+Wov48iESRWBLtxyYwhpxqx0blmX9PUE0npTFyCZnMW5fiRkGwUIizItHytkTzGzreu8B+c+DoDH8GPPszaYdxD35RU6hhgvxt+AHLofBEHROuNnGnnuqX9YpqO5Jbfcqn4sAn9EpVyinCB3FtHy7kvCGJrHN/3sAcUSbwCgGWx1ujkCVkkvixhclgKZg8CTJPkhDql1ocXY/RGwdRjsiLDpiAQjUZz4wRM9rWX3Ceg7klatHx38WHPz93Cd/OL53tI0v1z5BU0miK9nvXtjUfMszT3c1uNxt/cXy1TwD9+4PZc9611NQpRsImvMVuHBipd85pMDgKTrFvQyUxkKAX+xyFEltqLHZzLs/I8SPTUZVYTimM+xQh7/NPYgJKU+C+AV3Vp5to2QWSFAcOILCJBv6+SWZk6RgH51g2cWTPDDjV3i2FNEwghx6LMn5FU7OrACCn+sI/+mmVPcrCbI6SDZryBcTTtVp/aCO8W5s+3uLRvZFfdikPmDTcqEmSr9nuQ7GB8zj00s0xdabLo9fZ2hfhfZIOsv8hvdeGP9ERgVZFWxHnGMePUUOvoUMuSG/ji+4BuiO3xl5SUJ/7aorIP5+OhEdOlwkjow5gDJ+BYr/Co01Au51cUA1kWNOiHtbEELrUiYa1CjokH41ZjZcjPqnleftR9y2y3SqbmIhU/EpjvlsY/3J90kNe1dZBlcXdn7mO5v4Kcat8JsGdZuqsuhY/EYQuTi6Fw5kGZ2QNq9gn41ATge3Tq7BLTMDGFWZm/Hfb1Qxh45csDcEFbVWwfKXr0NRva1EWznmceI43LFKrbkfzbO9Jk73tGJ5Yo7IaRMtGbD/gHgqXlYlDU37kxzXoQPFl6gRmNyzBb77iNTsIqPBhjZjgGKXFiyHiRMA8o8a5I2KFCPnbUxYUA93Bb0VWiBKIfxl0G87M0WPqk4S1NAkWlVy4gDaN/3JVEJ4TrzoUCesJHlubk0E9GeQgsNXRZ2LfoO6y4BSn2bvcW8D3t2u7Urzrakrux08KfAfcaBCw40bVrE/kN3zz6d2SxcbPwcxryoDnZy1nejYBa0Tg1tQ66TovRFvqjDU4l4i7pgsIK3xzRmuqPcYvxvljk5NrZpTbUcT3yHBCswEHvTKnGtKaJutPwhwoBoF3I8Zw9/cfTiYJgp+eL5SPDkyV5VA2W0iLV/CcPjYhNiHG7TPvkgD7L+oKnqadKCxjfKZwl+mfG06KmjwBdDzyxqOMiqAhWzUjF3JNv8b3tx6MEEtndoUHULBw6aCDtX9IXvsTrX0TEwAFvOa70bKNorj+b/o1LrHAyQmCKGCT6o87JOmPnN4aKMCxddT12EIFvATAKxs3zdqLNKKqHgsISYTc9NKenRE34QCWJoVIpoMJayKE1jrBHC/RFPluIqlkd+myEAb+IaHJ5rSoh2MbdmE154p8pm6z/u7bIrI5A4+d/AzO1aocOiLfe6WKotYmy5+epK5rUJ5kO6eXXEUN6Y8mfXDMikGqtMSx0jmZczsBaBiAiRTHKmCGCtSX9Jr9TeGigk0/3/ADt3GZZfLiCGTeEiykfWdrjudGJsUupsfC0/Hb/EFDsW+XmRZK9rfVuymt4LMysaJqeIql3WYw/w7Ha4VSBe7F4iLRiks8BbRw2xetFuPBAVgU9IPxL4GStLNWHnN9ZvSnEk57yRwZNyLDcCHw6PcI08dfMNNonnbORjXtvf9dKP6k+C0/eaTFTzE0Bcz3Rlga/UnCJyWKpMtsEogDxVU9EOVobNECRHgNmII3cubcwnO03YFse2mjZeFeBWZt3K+U8ZqlQQIZ1plktYpGDq5oivrxa+ip/fm6CHg9eEXnrZoGOEDKbZHH/Epg++lWJxyNB/qi6ia29griOyyjwpsdd22WoSrH2cQgQQqUtPzOJ9BTKtojuNkEMGsj4zfEbcw14MX1E98aewxxU9xHJ4H0/aq/Dx7sR4IEE/ttEW94uxjTmWuK6aSiiZKG9+vifDz95c+ZBYOuHTMzEo3ibnCdYqX53cd0PXtEbqcm+q9KLEaRi26s/Dx8kh+YIkzpVT0GD20pVZ2kmxEP+ieKQ9+NkYyoSp2tSG5/YPlaTZiC4BPGSJULAuje41EZ2lMY+OROPUuBWlqjOtnOmTtlCNt6eeeJKXvJD2L2xUq4EhTqKdz6L0Ajfa0ay2TJ91XLYggBHmTzdv9AAt5Ojcr7ONtcexgNn8xXN1i/lfUzH3oWZUZIYY0m6hgD5FV+HeFTUUQNLs9ODkd+6Ngl4HYmApX5j73DmAB3L2Su0IQd9r6q48QBBNvGNFIQhQz8fepYvNqbjW51vxftVDyWwaFvcbGpZwIUFANfRF9ZKSa6vigQXyFoqHr5YG+slcCYeNkc4f/EpOGPSPQpYK11bk5U6FEDMb6N53zCUiE1G1LrefCUKT7pac0ns8Jw7FXxzF0vGrl2OKp0scQJ0lCq+JgGqycm0h5km11kZL3p10XtOz4jiBRJMQd0Lc0mnYXzx3sZBDH+/VPUaiBPjlmeDFNGi5uHNWRwLdOdFtoojas95rlIynUXxz1/f+ejbiQ0o7O0Xj4yAyoEp4MElbbqg4W3GKvyZnkJPaG/WIRE7KWRr9YOHtKD9w/gZV6osBcVCKcW+dXWgKW+RtKeEf/L87lw3HRTs0ehN6lVuJpA8ZnKtaGDnpEFpMi7Ro4rel26YIaTvMJGw9T1ivjVeYUyzN+UwMTKmNgb238I2wVELUp3hro2G16x9DuN47fgbN83LRkS0gYetZTA0P243NWFRww1cN1+7Y0L7OlOnHqXyaKbJWxwI6agLgHGz58/zhDuK6fBVc4DCcSdAJd8O12xt5ea/w7bGuv20hJbk550R42FGsLdRO+zYsehyOrjfHJWpgVSFk8dzW6prgVk/gwPQNLJ+yx9StmxtpZW+PApX1oWH0+H2umw2Sd+IF1pUEcNBBMK23UBDCM8kELEj5dbea+w3PqYfDl4AbBjv7FwpilbBIP08aXzf9KK8VeGZocPh/1l4XsJkwNoLTWWhzHLAnGTEvULNdKx2Kg/X1pk8EQ383bjE4yWyQ1O/FXG+c/fbxAeKvNapKSNQbg2ZPAkgFY/jzGcZx4iwMUV/7q5byJ5E180cLhxLw+ApWa5LD7IA5tKut7JvjYuYvlPCQUzWH9kXp9yJWv/PX/RXP+gH/VPnu+26HVvI2dznntUD2cgsFvpsXfh3SCz0N3ogmYSmGbId8dhtOYGuv0paNeAwD1zEc10+0fMvLBg8dPtRp4FbTvTVaGu1K82zRzqzv+G1mUpH2fuKleR1lc1/6uQMA1unu6XVKi4+4ylmjiOeDWx18CrLjj/KAOKAFInybIaVUgJFdcOKFjl6DBlV1EOdu1KhfN+JQqWqTTBDq6ADExL4/fEDVAmk6X0Owb4ASJct6W3A25QK/8WIACW7UhVvz3cAY84Eu76B1ig0MXufKJ/J2O2iKI1IV3pIqD+q67e6ULzvdKEXXlV91fYHz0agjM/9FtLuqXlK8S0ZoLCM/46qc/IMSpPnplr+fFaByOqkYo67jVdeRPUJ4FuX/msE9aXCzwwHmowKEemfwIUKTORjdA6lFy3anJEvyZnLPu72hHmjf+rBZdvPZ8KXq6aJ37cZu5KWDySOkrQlGrXAOglE273sE/OXSF7Nsp52EfvdGdhwnbuZFZ+3CnE9OcH6s4q2VmJj07DBc8D9QgEM0jfbPtkkaKS6KvmT6K9UPfApT5ABxeL//BqxZCsHkwqkYKzFuEM7EM1F3vU8SUMzCdmNM5WkqofvI9fXrA5D4nsLML+Z0vdjrK35O+O9mFsTgAOBZaw2a4cNZfekqSYKc1nyywQroA1TuiZRJ+yTNBcCQnMVVWSZcQLzCK6fkFcEC2BkmOSvHjnifEZWUna1qOeKbi2a/UmFJ8+tOQOA9L2nRk2a+mv4aEMw13ViJWvUpoCVeShpV/HmV7+MAEQj8KWtHWbK+v5lwSXuecMYAHIdoCJ9Z1yFLA0LOgb25YnfIVQJdGya0a4GVdH990u0vSBJVlnLEhOcOrXTlubyFB4fPjGCh+BzWqHIR79hry4fIRtB18Su9HGnIMZdJnb7Ry0VYH5H2ju9xuHQ/LZptGHuGRjZu0svwXxP6oNsNxrZZPH8g9MUK9saAnw0orcVHAimq0C/EjMcvjs6t9XUES0eZo/8s1HudM4QBHRmbOvldJLkCXJl2UV4D70zRoz+gf92HcZ+Rt0heH7CU1IP39cymN9aPS4oWjvYrSFju//Fwlqu/L/A1JXqVR+1kK0XCRLL/Mf8Ch/4zT9apqg5GIoPg1Qyp/0mK14kBYcZSz/swhU0Xq5Sz79BCF3sTRAs1FKM5RaayP34TSoHcqby/mYs8kEWscF3KmyAusEbx8BqmR8XnsgVs2OvAITaPkUuH/rVIE7n2u1AtfGCRoToGsA8mhTi2ZXgKupY1/QV6wNi4AAAAAAAAAAA==" alt="IQ Services logo" style="height:160px;width:160px;border-radius:50%"></div><div class="b"><h3>IQ Services Logo</h3><p>Brand mark for a printing and personalization company, built around a star and orbit motif in a bold monochrome palette.</p><div class="tags"><span>Logo design</span><span>Branding</span></div></div></article>
-<article class="proj"><div class="thumb" style="background:var(--blue)">iqservices.lovable.app</div><div class="b"><h3>IQ Services Website</h3><p>Business website presenting custom products such as mugs, jerseys, phone covers and PVC boards, along with design services.</p><div class="tags"><span>Web development</span><span>Responsive</span></div><a href="https://iqservices.lovable.app">Visit website</a></div></article>
-</div>
-</section>
+    <section id="about">
+      <div class="section-head"><div><h2>About Me</h2><p class="sub">Curiosity first. Build, test, learn, repeat.</p></div></div>
+      <div class="card">
+        <p>My interests sit where software, infrastructure, and information meet. I am developing my foundation in front-end web technologies, computer networking, and Python-based data work. I value clear design, practical experiments, and steady progress.</p>
+      </div>
+    </section>
 
-<section id="skills">
-<h2>Skills</h2>
-<div class="skills">
-<div><h3 class="r">Design</h3><ul><li>Logo design</li><li>Brand identity</li><li>Print and promotional layouts</li><li>Custom product design</li></ul></div>
-<div><h3 class="c">Development</h3><ul><li>HTML and CSS</li><li>JavaScript</li><li>Responsive, mobile-first websites</li><li>AI-assisted development</li></ul></div>
-</div>
-</section>
+    <section id="skills">
+      <div class="section-head"><div><h2>Skills & Interests</h2><p class="sub">Technologies and topics I'm learning and practicing.</p></div></div>
+      <div class="grid">
+        <article class="card"><div class="icon">🌐</div><h3>Web Development</h3><p>Building responsive pages and exploring interactive web experiences.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div></article>
+        <article class="card"><div class="icon">🔌</div><h3>Networking</h3><p>Learning how devices communicate and how networks are configured.</p><div class="tags"><span class="tag">TCP/IP</span><span class="tag">DNS</span><span class="tag">Subnetting</span></div></article>
+        <article class="card"><div class="icon">📊</div><h3>Data Science</h3><p>Exploring Python for working with, analyzing, and presenting data.</p><div class="tags"><span class="tag">Python</span><span class="tag">Analysis</span><span class="tag">Visualization</span></div></article>
+      </div>
+    </section>
 
-<section class="about" id="about">
-<div><h2>About</h2></div>
-<div>
-<p>I am a designer and developer, and the founder of IQ Services, where I create personalized products and design work for clients.</p>
-<p>Working directly with customers every day taught me that good design has to look right and also do its job.</p>
-</div>
-</section>
+    <section id="projects" class="projects">
+      <div class="section-head"><div><h2>Featured Projects</h2><p class="sub">A starting point for showcasing practical work.</p></div><a href="https://github.com/louid04?tab=repositories" target="_blank" rel="noreferrer">Browse repositories ↗</a></div>
+      <div class="grid">
+        <article class="card"><div class="icon">💻</div><h3>Personal Portfolio</h3><p>This portfolio page, designed with a dark interface, responsive layout, and a focus on my technology interests.</p><a class="project-link" href="https://github.com/louid04/louid04" target="_blank" rel="noreferrer">View repository ↗</a></article>
+        <article class="card"><div class="icon">🛜</div><h3>Networking Lab</h3><p>A place to document networking exercises, lab notes, diagrams, and configurations as they are developed.</p><span class="project-link" style="color:var(--muted)">Project link to be added</span></article>
+        <article class="card"><div class="icon">📈</div><h3>Data Analysis</h3><p>A future home for Python notebooks, data exploration, charts, and lessons learned from datasets.</p><span class="project-link" style="color:var(--muted)">Project link to be added</span></article>
+      </div>
+      <p class="note">Note: Networking Lab and Data Analysis are showcase ideas, not claims that completed repositories already exist. Add their links when you publish them.</p>
+    </section>
 
-<section class="contact" id="contact">
-<h2>Let's work together</h2>
-<p class="lead">Have a project in mind? Send me a message.</p>
-<a class="big" href="mailto:louidjydescardes5@gmail.com">louidjydescardes5@gmail.com</a>
-<div class="links"><a href="https://wa.me/50942030938">WhatsApp: +509 4203 0938</a><a href="tel:+50942030938">Call</a><a href="https://iqservices.lovable.app">IQ Services</a></div>
-</section>
-<footer>© Louidjy Descardes · Les Cayes, Haiti</footer>
-</div>
+    <section id="contact">
+      <div class="contact">
+        <div><h2>Let's Connect</h2><p>Open to learning, collaboration, and interesting projects.</p></div>
+        <a class="btn" href="https://github.com/louid04" target="_blank" rel="noreferrer">Connect on GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footrow"><span>© <span id="year"></span> Louidjy Descardes</span><span>Better code · Stronger networks · Smarter data</span><a href="#home">Back to top ↑</a></div></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
